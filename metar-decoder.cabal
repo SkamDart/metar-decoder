@@ -6,11 +6,11 @@ cabal-version: 1.12
 --
 -- hash: 3b4f6c3ec579e457e3f6dafdbe1e47fc38dcc9a86eb4d05c47ce69f9da4f6344
 
-name:           parser-combinator
+name:           metar-decoder
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/parser-combinator#readme>
-homepage:       https://github.com/githubuser/parser-combinator#readme
-bug-reports:    https://github.com/githubuser/parser-combinator/issues
+description:    Please see the README on GitHub at <https://github.com/githubuser/metar-decoder#readme>
+homepage:       https://github.com/githubuser/metar-decoder#readme
+bug-reports:    https://github.com/githubuser/metar-decoder/issues
 author:         Author name here
 maintainer:     example@example.com
 copyright:      2019 Author name here
@@ -23,7 +23,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/parser-combinator
+  location: https://github.com/githubuser/metar-decoder
 
 library
   exposed-modules:
@@ -36,7 +36,7 @@ library
       base >=4.7 && <5
   default-language: Haskell2010
 
-executable parser-combinator-exe
+executable metar-decoder-exe
   main-is: Main.hs
   other-modules:
       Paths_parser_combinator
@@ -45,10 +45,10 @@ executable parser-combinator-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , parser-combinator
+    , metar-decoder
   default-language: Haskell2010
 
-test-suite parser-combinator-test
+test-suite metar-decoder-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
@@ -58,5 +58,5 @@ test-suite parser-combinator-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , parser-combinator
+    , metar-decoder
   default-language: Haskell2010
