@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 3b4f6c3ec579e457e3f6dafdbe1e47fc38dcc9a86eb4d05c47ce69f9da4f6344
+-- hash: 1cfccfc304decb80ddddff4e829277c7efef0f26b0e993d4ffc95a068a3777a3
 
 name:           metar-decoder
 version:        0.1.0.0
@@ -15,7 +15,6 @@ author:         Author name here
 maintainer:     example@example.com
 copyright:      2019 Author name here
 license:        BSD3
-license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
@@ -29,7 +28,7 @@ library
   exposed-modules:
       Lib
   other-modules:
-      Paths_parser_combinator
+      Paths_metar_decoder
   hs-source-dirs:
       src
   build-depends:
@@ -39,7 +38,7 @@ library
 executable metar-decoder-exe
   main-is: Main.hs
   other-modules:
-      Paths_parser_combinator
+      Paths_metar_decoder
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
@@ -52,7 +51,7 @@ test-suite metar-decoder-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_parser_combinator
+      Paths_metar_decoder
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
