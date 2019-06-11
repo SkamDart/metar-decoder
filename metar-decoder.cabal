@@ -4,16 +4,16 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1cfccfc304decb80ddddff4e829277c7efef0f26b0e993d4ffc95a068a3777a3
+-- hash: b241e1627bfb3b8c9559a3f3dc33b09b808fe614c4d55e08d62df0feadff1dba
 
 name:           metar-decoder
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/metar-decoder#readme>
-homepage:       https://github.com/githubuser/metar-decoder#readme
-bug-reports:    https://github.com/githubuser/metar-decoder/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2019 Author name here
+description:    Please see the README on GitHub at <https://github.com/SkamDart/metar-decoder#readme>
+homepage:       https://github.com/SkamDart/metar-decoder#readme
+bug-reports:    https://github.com/SkamDart/metar-decoder/issues
+author:         Cameron Dart
+maintainer:     cdart2@gmail.com
+copyright:      2019 Cameron Dart
 license:        BSD3
 build-type:     Simple
 extra-source-files:
@@ -22,7 +22,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/metar-decoder
+  location: https://github.com/SkamDart/metar-decoder
 
 library
   exposed-modules:
