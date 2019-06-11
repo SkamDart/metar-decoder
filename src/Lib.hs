@@ -1,5 +1,6 @@
 module Lib
-    ( someFunc
+    ( metar
+      , Report
     ) where
 
 import Control.Applicative
@@ -14,9 +15,6 @@ data Report = Report { station :: Airport, time :: Time, wind :: WindInfo }
 
 type Airport = String
 type Time = (Int, Int, Int)
-
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
 
 mapTriple :: (a -> b) -> (a, a, a) -> (b, b, b)
 mapTriple f (a1, a2, a3) = (f a1, f a2, f a3)
