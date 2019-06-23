@@ -1,2 +1,13 @@
+import Test.Tasty
+import Test.Tasty.HUnit
+
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = defaultMain unitTests
+
+unitTests = testGroup "Unit Tests"
+    [mkTestSomething
+    ]
+
+mkTestSomething =
+    testCase "foo" $ assertEqual [] "foo" "foo"
