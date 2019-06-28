@@ -1,10 +1,10 @@
 module Main where
 
-import Control.Monad.Trans
-import System.Console.Haskeline
-import Text.ParserCombinators.ReadP
+import           Control.Monad.Trans
+import           System.Console.Haskeline
+import           Text.ParserCombinators.ReadP
 
-import Lib
+import           Lib
 
 process :: String -> IO ()
 process line = putStrLn $ show $ fst $ head (readP_to_S metar line)
@@ -15,5 +15,5 @@ main = runInputT defaultSettings loop
         loop = do
             minput <- getInputLine "Metar> "
             case minput of
-                Nothing -> outputStrLn "goodbye!"
+                Nothing    -> outputStrLn "goodbye!"
                 Just input -> (liftIO $ process input) >> loop

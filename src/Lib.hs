@@ -4,8 +4,8 @@ module Lib
     , Report
     ) where
 
-import Control.Applicative
-import Text.ParserCombinators.ReadP
+import           Control.Applicative
+import           Text.ParserCombinators.ReadP
 
 
 data WindInfo = WindInfo { dir :: Int, speed :: Int, gusts :: Maybe Int }
@@ -52,7 +52,7 @@ airport = do
 toMPS :: String -> Int -> Int
 toMPS _unit speed =
     case _unit of
-        "KT" -> div speed 2
+        "KT"  -> div speed 2
         "MPS" -> speed
 
 gustParser :: ReadP Int
@@ -68,9 +68,10 @@ windInfo = do
     unit <- string "KT" <|> string "MPS"
     string " "
     return (WindInfo
-        direction
-        (toMPS unit speed)
-        (fmap (toMPS unit) gusts))
+                direction
+                (toMPS unit speed)
+                (fmap (toMPS unit) gusts)
+           )
 
 metar :: ReadP Report
 metar = do
