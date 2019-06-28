@@ -1,6 +1,7 @@
 module Lib
     ( metar
-      , Report
+    , mapTriple
+    , Report
     ) where
 
 import Control.Applicative
@@ -49,8 +50,8 @@ airport = do
     return code
 
 toMPS :: String -> Int -> Int
-toMPS unit speed =
-    case unit of
+toMPS _unit speed =
+    case _unit of
         "KT" -> div speed 2
         "MPS" -> speed
 
